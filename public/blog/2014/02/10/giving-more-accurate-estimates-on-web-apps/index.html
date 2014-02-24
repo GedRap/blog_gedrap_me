@@ -1,0 +1,304 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Giving more accurate estimates on Web apps - Ged's Blog</title>
+  <meta name="author" content="Gediminas Rapolavicius">
+
+  
+  <meta name="description" content="For a rather long time, I was giving time estimates which were way too optimistic, caused by mindset &ldquo;okay, it&rsquo;s not complicated, it &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://blog.gedrap.me/blog/2014/02/10/giving-more-accurate-estimates-on-web-apps">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Ged's Blog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+
+  <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-42754612-2', 'gedrap.me');
+ga('send', 'pageview');
+
+</script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Ged's Blog</a></h1>
+  
+    <h2>Thoughts of a coder.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:blog.gedrap.me" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+<li><a href="http://gedrap.me/">Home</a></li>
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Giving More Accurate Estimates on Web Apps</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-10T15:50:00+00:00" pubdate data-updated="true">Feb 10<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>For a rather long time, I was giving time estimates which were way too optimistic, caused by mindset &ldquo;okay, it&rsquo;s not complicated, it should take XYZ&rdquo;.</p>
+
+<p>Oh I was wrong. While it&rsquo;s not complicated, there is so much code to write and test! The complexity is really misleading when it comes to estimates.</p>
+
+<p>So I came up with a list of factors to consider when giving estimates and making it more systematic. While they are for Web applications, I am sure it can easily be applied to mobile apps and etc.</p>
+
+<ul>
+<li>Number of entities and the number of properties in them in the domain model. This is one of the major factors. Each entity normaly has (at least) CRUD interface in the backend, and corresponding user interfaces for C, R, U and D. Which can easily make up a significant share of the code base.</li>
+<li>Number of forms. Each form (often) requires a decent amount of code for HTML, sending it to the backend, parsing the results. In my opinion, together with the number of entities, they are the strongest factors.</li>
+<li>Relationships between entities (one-to-many, etc). Easy to overlook because normally it looks trivial but for larger applications it carries a reasonable weight.</li>
+<li>Number of pages. Each page has it&rsquo;s own time overhead, whether it&rsquo;s just generated with yeoman, or manually. Can be ignored for small applications, but again, carries some weight for larger ones.</li>
+<li>Initial time to set up the environment. Personally, I consider it as the time it takes to set up the backend framework, front end application, and some infrastructure (such as Trello board with notes).</li>
+</ul>
+
+
+<p>While it sounds trivial, it helped me a lot to make giving the estimates more systematic.</p>
+
+<p>Can a formula be derived from it? I believe so. How accurate could it be? Well, ideally, it could be pretty accurate given enough data for accurate coefficients. I guess if you try to derive a formula and spend a reasonable amount of time on working with data (how long it took to create the CRUD interface for this entity, etc) you would have a rather good gut feeling. Probably better than any formula.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Gediminas Rapolavicius</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-10T15:50:00+00:00" pubdate data-updated="true">Feb 10<span>th</span>, 2014</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/web/'>Web</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://blog.gedrap.me/blog/2014/02/10/giving-more-accurate-estimates-on-web-apps/" data-via="gedrap" data-counturl="http://blog.gedrap.me/blog/2014/02/10/giving-more-accurate-estimates-on-web-apps/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/02/09/its-all-about-the-short-breaks/" title="Previous Post: It's all about the short breaks">&laquo; It's all about the short breaks</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/02/10/giving-more-accurate-estimates-on-web-apps/">Giving More Accurate Estimates on Web Apps</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/02/09/its-all-about-the-short-breaks/">It's All About the Short Breaks</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/11/02/os-in-15-weeks-choosing-the-platform/">OS in 15 Weeks: Choosing the Platform</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/08/21/a-guide-on-how-to-not-get-an-internship/">A Guide on How to NOT Get an Internship</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/08/01/code-instead-of-breakfast-my-productivity-hack/">Code Instead of Breakfast: My Productivity Hack</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/GedRap">@GedRap</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'GedRap',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+<section>
+	<h1>Twitter</h1>
+	<a class="twitter-timeline" href="https://twitter.com/GedRap" data-widget-id="396702805454364672">Tweets by @GedRap</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Gediminas Rapolavicius -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

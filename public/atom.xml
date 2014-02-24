@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Ged's Blog]]></title>
+  <link href="http://blog.gedrap.me/atom.xml" rel="self"/>
+  <link href="http://blog.gedrap.me/"/>
+  <updated>2014-02-10T17:03:04+00:00</updated>
+  <id>http://blog.gedrap.me/</id>
+  <author>
+    <name><![CDATA[Gediminas Rapolavicius]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Giving more accurate estimates on Web apps]]></title>
+    <link href="http://blog.gedrap.me/blog/2014/02/10/giving-more-accurate-estimates-on-web-apps/"/>
+    <updated>2014-02-10T15:50:00+00:00</updated>
+    <id>http://blog.gedrap.me/blog/2014/02/10/giving-more-accurate-estimates-on-web-apps</id>
+    <content type="html"><![CDATA[<p>For a rather long time, I was giving time estimates which were way too optimistic, caused by mindset &ldquo;okay, it&rsquo;s not complicated, it should take XYZ&rdquo;.</p>
+
+<p>Oh I was wrong. While it&rsquo;s not complicated, there is so much code to write and test! The complexity is really misleading when it comes to estimates.</p>
+
+<p>So I came up with a list of factors to consider when giving estimates and making it more systematic. While they are for Web applications, I am sure it can easily be applied to mobile apps and etc.</p>
+
+<ul>
+<li>Number of entities and the number of properties in them in the domain model. This is one of the major factors. Each entity normaly has (at least) CRUD interface in the backend, and corresponding user interfaces for C, R, U and D. Which can easily make up a significant share of the code base.</li>
+<li>Number of forms. Each form (often) requires a decent amount of code for HTML, sending it to the backend, parsing the results. In my opinion, together with the number of entities, they are the strongest factors.</li>
+<li>Relationships between entities (one-to-many, etc). Easy to overlook because normally it looks trivial but for larger applications it carries a reasonable weight.</li>
+<li>Number of pages. Each page has it&rsquo;s own time overhead, whether it&rsquo;s just generated with yeoman, or manually. Can be ignored for small applications, but again, carries some weight for larger ones.</li>
+<li>Initial time to set up the environment. Personally, I consider it as the time it takes to set up the backend framework, front end application, and some infrastructure (such as Trello board with notes).</li>
+</ul>
+
+
+<p>While it sounds trivial, it helped me a lot to make giving the estimates more systematic.</p>
+
+<p>Can a formula be derived from it? I believe so. How accurate could it be? Well, ideally, it could be pretty accurate given enough data for accurate coefficients. I guess if you try to derive a formula and spend a reasonable amount of time on working with data (how long it took to create the CRUD interface for this entity, etc) you would have a rather good gut feeling. Probably better than any formula.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[It's all about the short breaks]]></title>
+    <link href="http://blog.gedrap.me/blog/2014/02/09/its-all-about-the-short-breaks/"/>
+    <updated>2014-02-09T16:36:00+00:00</updated>
+    <id>http://blog.gedrap.me/blog/2014/02/09/its-all-about-the-short-breaks</id>
+    <content type="html"><![CDATA[<p>I&rsquo;ve recently notice that how productive your day is depends all on how do you spend your short breaks.</p>
+
+<p>There are two kinds of short breaks:</p>
+
+<ul>
+<li>one during which you just actually have a short, relaxing break for a cup of coffee, cigarette, or anything like that,</li>
+<li>one which evolves into a long, focus loosing and feeling guilty for doing nothing break.</li>
+</ul>
+
+
+<p>The hazard with taking a short break is that it can easily escalate into the second type of a break.
+A coffee followed by Hacker News, or a few minutes of watching TV series followed by spending an hour because you just have to know what happens next (I&rsquo;m looking at you, Dexter).</p>
+
+<p>I also found that the key to staying productive is keeping the short breaks useful, meaningful. Do what actually relaxes you and prepares for another focused sprint. Checking Hacker News probably isn&rsquo;t. Going away from the computer to make a cup of tea is. Well, at least for me.
+Because once you take a &lsquo;bad&rsquo; break, it is hard to get the focus back to the initial level. Tasks are pilling up, feeling of guilt strikes sooner or latter, undone tasks are moved for tomorrow. And tomorrow is just worse.</p>
+
+<p>I found that <a href="http://pomodorotechnique.com/">Pomodoro Technique</a> is extremely useful for this, especially for the ugly taks which just have to be done. 5 minutes breaks are long enough to have a quick snack, or a little walk away from the computer. But it is not long enough to lose the focus. And knowing that your next break is soon, keeps you away from distractions.</p>
+
+<p>OK, my short break is over, back to coding!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[OS in 15 weeks: choosing the platform]]></title>
+    <link href="http://blog.gedrap.me/blog/2013/11/02/os-in-15-weeks-choosing-the-platform/"/>
+    <updated>2013-11-02T15:47:00+00:00</updated>
+    <id>http://blog.gedrap.me/blog/2013/11/02/os-in-15-weeks-choosing-the-platform</id>
+    <content type="html"><![CDATA[<p>My goal: write an (kind of) operating system in 15 weeks.</p>
+
+<p>I&rsquo;ve been dreaming about it for a while. I tried copy&amp;paste various snippets (without having an idea what they do) when I was about 15. Gave up a week later :)</p>
+
+<p>Now, as I am doing my final year at university, and know a tiny little bit more about how computers work, it&rsquo;s time to do it again, this time as a third year project (which counts as 25% of the degree).</p>
+
+<p>The first challenge I encountered was choosing the platform to build it for. PC? Raspberry Pi? Some ARM board? I am going to describe the thought process I went through in this post.</p>
+
+<!-- more -->
+
+
+<h2>PC</h2>
+
+<p>This naturally came as first consideration. While there are <a href="http://www.amazon.co.uk/Modern-Operating-Systems-Andrew-Tanenbaum/dp/1292025778">plenty</a>
+<a href="http://wiki.osdev.org/Main_Page">of</a> information on the Web and examples to look at (whether it&rsquo;s <a href="http://www.menuetos.net/">MenuetOS</a> or early <a href="https://www.kernel.org/pub/linux/kernel/Historic/old-versions/">Linux kernels</a>), I quickly rejected it. First of all, it would require studying x86 architecture in some depth, which would take considerable time. Given the time frame of 15 weeks (300-400 hours), it&rsquo;s not great. Secondly, I was really eager to get more experience with microcontrollers. Writing a simple calculator in ARM assembly half a year ago made me eager to do more of the same. Oh those evening in the lab, stepping instruction by instruction&hellip;</p>
+
+<h2>Raspberry PI</h2>
+
+<p>It&rsquo;s hard to skip that, when it has so much hype around it. A familiar ARM architecture and a large community. But I was warned early by my supervisor, that Raspberry is not totally open (which sucks, if you are hacking) and there were failed attempts in the past because of it. I left it as a &lsquo;Plan B&rsquo;. But didn&rsquo;t come back :)</p>
+
+<h2>ARM board with Xilinx FPGA</h2>
+
+<p>I&rsquo;ve written a before mentioned calculator (after attaching 3*4 keyboard) for <a href="http://brej.org/armboard/">this board</a>. Pros: my supervisor contributed building it (loads of help available!). Cons: dubious suport of GCC toolchain (writing everything in assembly might not be the most productive thing). Is familiar architecture pro or con? That&rsquo;s discussable. ARM is everywhere. But knowing more than architecture is benefitial when it comes to comparing. So what other architectures are available? And here we come to&hellip;</p>
+
+<h2>AVR (Arduino)</h2>
+
+<p>Modified Harvard architecture. Something new to me, but not too complex to understand it quickly. Huge community support, both for AVR itself and Arduino. Why Arduino rather than simple AVR board? First of all, Arduino gives some optional abstraction. It&rsquo;s up to you to use or not. For instance, TFT LCD library with functions such as writing text might save a lot of time. At first, I was afraid that it might be hard to find help when it comes to more advanced topics bot oh I was wrong. Arduino has amazin community. The only con? Default IDE quickly becomes too simple and limiting. Then Atmel Studio comes to help! Therefore, it became my choice!</p>
+
+<h2>Project Aim</h2>
+
+<p>Surprisingly, it took me a while to decide what do I want to build. After some thought I came up with:</p>
+
+<ul>
+<li>Multitasking. Simple context switching.</li>
+<li>I/O events. For instance, call application&rsquo;s callback, when interrupt occurs. But wait, we have to serve interrupts fast! We need a queue! Starts to get interesting :)</li>
+<li>Simple UI manager. Let applications output some text. But it will be a mess if we allow multiple threads to write at once&hellip; We need a resource manager and locks! Now it&rsquo;s getting fun!</li>
+<li>An application (or two!) to demonstrate the features.</li>
+</ul>
+
+
+<p>I am excited!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[A Guide on How to NOT Get an Internship]]></title>
+    <link href="http://blog.gedrap.me/blog/2013/08/21/a-guide-on-how-to-not-get-an-internship/"/>
+    <updated>2013-08-21T13:00:00+01:00</updated>
+    <id>http://blog.gedrap.me/blog/2013/08/21/a-guide-on-how-to-not-get-an-internship</id>
+    <content type="html"><![CDATA[<p>I am writing this based mainly on my experience (which I am NOT proud of) and a little on what the people I know have told me. An internship is a bloody amazing thing. You are 20, and you go to Goldman Sachs to write some code. Or Morgan Stanley. Or ARM. You name it. You might feel like a king of the world for a while. You can’t wish for a better career’s start.</p>
+
+<p>On the other hand, you might be listening to your friends and coursemates telling you how amazing it is and hate yourself (this is what I do) while thinking about getting the graduate job and competing with 40-100 people for one place. You don’t want to be in this position.</p>
+
+<p>So here we go, the tips on how to make sure you will not get an internship[0] straight from the pro.</p>
+
+<p>“Just give me a month or two, I will add something kick ass to my CV and will nail it”. No, you won’t, most of the time. If you were doing nothing for the last year or two, a month for a side project probably won’t change much. And if you were doing awesome stuff in the last couple of years, you are awesome enough. During the interviews I had, no one asked me a lot about my previous experience (a year of Web Dev at local start up at that time).</p>
+
+<p>“Deadline is in 2 weeks, it’s enough time”. No, it’s not. The application is still open, but the chances are they have all the vacations filled up. Especially, if it is a mega corp. Most of the people I know who landed a good internship/placement, applied in September/October.</p>
+
+<p>Get yourself some interview experience. The more you have done, the easier, less stresful they are. The first job interview in my life was at Morgan Stanley. I was too stressful to think when I didn’t know an answer straight away, or when I knew I tried to impress (too much) and talked lots of unrelated crap. That’s something you can eliminate only with experience. Googling for interview questions will not replace it.</p>
+
+<p>“I don’t need the internship, I just… just… Want to graduate soon! Yeah. I want to graduate.” While sometimes there are genuine reasons why not taking it is better, more often it’s just an excuse because you would be stepping out of your comfort zone. It’s like 2 dudes at the party talking “Hey look that girl is so hot!” “Yeah, go and say hi” “Well… She’s not that hot actually”. Kind of.</p>
+
+<p>That’s something I wish someone told me a year ago. Hopefully, you will not end up doing the same mistakes I did :)</p>
+
+<p>[0] or placement, I believe there is a minor difference in terminology in the UK and the States</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Code Instead of Breakfast: My Productivity Hack]]></title>
+    <link href="http://blog.gedrap.me/blog/2013/08/01/code-instead-of-breakfast-my-productivity-hack/"/>
+    <updated>2013-08-01T16:24:00+01:00</updated>
+    <id>http://blog.gedrap.me/blog/2013/08/01/code-instead-of-breakfast-my-productivity-hack</id>
+    <content type="html"><![CDATA[<p>For the last few months (about 8), I am working exclusively remotely. Sometimes from home, sometimes from university [1]. And like all of us, had those frustrating days when I see that’s evening already, haven’t done anything significant yet and I know I will have to compensate that tomorrow. Kills the mood.</p>
+
+<p>Fortunately, I found a “cure” which gets me in a productive mindset from the very morning.</p>
+
+<p>The first thing I do when I wake in the morning is I write some code. Maybe a quick bug fix, maybe add a little feature to my side project. Just some code, a minute after waking up.</p>
+
+<p>So far, it worked amazingly well.</p>
+
+<p>[1] We have something like open plan office building with 24/7 access during term time, totally free. Love University of Manchester.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Writing Code With a Cellphone Back in 2005]]></title>
+    <link href="http://blog.gedrap.me/blog/2013/07/30/writing-code-with-a-cellphone-back-in-2005/"/>
+    <updated>2013-07-30T10:25:00+01:00</updated>
+    <id>http://blog.gedrap.me/blog/2013/07/30/writing-code-with-a-cellphone-back-in-2005</id>
+    <content type="html"><![CDATA[<p>Year 2005. PCs and Internet are still too expensive for the majority of Lithuanians, entry level cell phones got colorful screens and GPRS became affordable. And a bunch of teenagers itching to create a new WAP (mobile WEB) site.</p>
+
+<p>When I was preparing for my first real job interview, I was trying to remember how I got into programming. It is sentimental, a bit funny now. But that’s how I got hooked on.</p>
+
+<p>By writing PHP using an entry level cell phone.</p>
+
+<p>The browsers were extremely limited (you can’t put much into 96x65 screen, can you?). No bold text. No colorful text. No font-sizes. Just plain text, images, inputs and links. But when people are in need and are highly motivated, they come with creative solutions.</p>
+
+<p>There was a thing called ‘WAP FTP’. A dead simple FTP client for WAP. You type in login credentials, you type in the source code in a number of input fields (since one input field was limited to 180 or 160 characters), you type file path and click ‘Save’. Then, you hold your breath for a second, type in the URL of your masterpiece.</p>
+
+<p>‘File format not supported’. That was a common message by the browser. It meant that there is either PHP error (those browsers couldn’t really deal with malformed XML) or malformed WML (basically HTML for WAP).</p>
+
+<p>What’s next? Typing (yeah, lots of typing, the rubber buttons used to wear out pretty fast) the broken page’s URL in a tool we called ‘source viewer’, which is the same as ‘View source’ in your browser, to find the error because it allowed us to see PHP error messages.</p>
+
+<p>What about debugging? Well, we were too young to produce something that would need debugging actually. Most of us were ~14 years old, couldn’t read English, and were sharing scarce articles we could manage to find in our native language.</p>
+
+<p>The smarter ones (or the ones whose parent could have afforded a PC with the Internet connection) were making some money by selling some PHP scripts (like the ‘WAP FTP’ I have mentioned). But since most of us were boys in early teenage years, without computers, how did we manage to transfer money? By buying top up vouchers and sending the unique codes. Back then, you could get most of the things for $2-15.</p>
+
+<p>Almost ten years fast forward, I have just finished year 2 at University of Manchester (Computer Science, obviously) and am about to start writing OS in ARM assembler as a final year project. That was quite a trip so far!</p>
+]]></content>
+  </entry>
+  
+</feed>

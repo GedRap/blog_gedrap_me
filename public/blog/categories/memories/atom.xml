@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Memories | Ged's Blog]]></title>
+  <link href="http://blog.gedrap.me/blog/categories/memories/atom.xml" rel="self"/>
+  <link href="http://blog.gedrap.me/"/>
+  <updated>2014-02-10T17:03:04+00:00</updated>
+  <id>http://blog.gedrap.me/</id>
+  <author>
+    <name><![CDATA[Gediminas Rapolavicius]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[A Guide on How to NOT Get an Internship]]></title>
+    <link href="http://blog.gedrap.me/blog/2013/08/21/a-guide-on-how-to-not-get-an-internship/"/>
+    <updated>2013-08-21T13:00:00+01:00</updated>
+    <id>http://blog.gedrap.me/blog/2013/08/21/a-guide-on-how-to-not-get-an-internship</id>
+    <content type="html"><![CDATA[<p>I am writing this based mainly on my experience (which I am NOT proud of) and a little on what the people I know have told me. An internship is a bloody amazing thing. You are 20, and you go to Goldman Sachs to write some code. Or Morgan Stanley. Or ARM. You name it. You might feel like a king of the world for a while. You can’t wish for a better career’s start.</p>
+
+<p>On the other hand, you might be listening to your friends and coursemates telling you how amazing it is and hate yourself (this is what I do) while thinking about getting the graduate job and competing with 40-100 people for one place. You don’t want to be in this position.</p>
+
+<p>So here we go, the tips on how to make sure you will not get an internship[0] straight from the pro.</p>
+
+<p>“Just give me a month or two, I will add something kick ass to my CV and will nail it”. No, you won’t, most of the time. If you were doing nothing for the last year or two, a month for a side project probably won’t change much. And if you were doing awesome stuff in the last couple of years, you are awesome enough. During the interviews I had, no one asked me a lot about my previous experience (a year of Web Dev at local start up at that time).</p>
+
+<p>“Deadline is in 2 weeks, it’s enough time”. No, it’s not. The application is still open, but the chances are they have all the vacations filled up. Especially, if it is a mega corp. Most of the people I know who landed a good internship/placement, applied in September/October.</p>
+
+<p>Get yourself some interview experience. The more you have done, the easier, less stresful they are. The first job interview in my life was at Morgan Stanley. I was too stressful to think when I didn’t know an answer straight away, or when I knew I tried to impress (too much) and talked lots of unrelated crap. That’s something you can eliminate only with experience. Googling for interview questions will not replace it.</p>
+
+<p>“I don’t need the internship, I just… just… Want to graduate soon! Yeah. I want to graduate.” While sometimes there are genuine reasons why not taking it is better, more often it’s just an excuse because you would be stepping out of your comfort zone. It’s like 2 dudes at the party talking “Hey look that girl is so hot!” “Yeah, go and say hi” “Well… She’s not that hot actually”. Kind of.</p>
+
+<p>That’s something I wish someone told me a year ago. Hopefully, you will not end up doing the same mistakes I did :)</p>
+
+<p>[0] or placement, I believe there is a minor difference in terminology in the UK and the States</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Writing Code With a Cellphone Back in 2005]]></title>
+    <link href="http://blog.gedrap.me/blog/2013/07/30/writing-code-with-a-cellphone-back-in-2005/"/>
+    <updated>2013-07-30T10:25:00+01:00</updated>
+    <id>http://blog.gedrap.me/blog/2013/07/30/writing-code-with-a-cellphone-back-in-2005</id>
+    <content type="html"><![CDATA[<p>Year 2005. PCs and Internet are still too expensive for the majority of Lithuanians, entry level cell phones got colorful screens and GPRS became affordable. And a bunch of teenagers itching to create a new WAP (mobile WEB) site.</p>
+
+<p>When I was preparing for my first real job interview, I was trying to remember how I got into programming. It is sentimental, a bit funny now. But that’s how I got hooked on.</p>
+
+<p>By writing PHP using an entry level cell phone.</p>
+
+<p>The browsers were extremely limited (you can’t put much into 96x65 screen, can you?). No bold text. No colorful text. No font-sizes. Just plain text, images, inputs and links. But when people are in need and are highly motivated, they come with creative solutions.</p>
+
+<p>There was a thing called ‘WAP FTP’. A dead simple FTP client for WAP. You type in login credentials, you type in the source code in a number of input fields (since one input field was limited to 180 or 160 characters), you type file path and click ‘Save’. Then, you hold your breath for a second, type in the URL of your masterpiece.</p>
+
+<p>‘File format not supported’. That was a common message by the browser. It meant that there is either PHP error (those browsers couldn’t really deal with malformed XML) or malformed WML (basically HTML for WAP).</p>
+
+<p>What’s next? Typing (yeah, lots of typing, the rubber buttons used to wear out pretty fast) the broken page’s URL in a tool we called ‘source viewer’, which is the same as ‘View source’ in your browser, to find the error because it allowed us to see PHP error messages.</p>
+
+<p>What about debugging? Well, we were too young to produce something that would need debugging actually. Most of us were ~14 years old, couldn’t read English, and were sharing scarce articles we could manage to find in our native language.</p>
+
+<p>The smarter ones (or the ones whose parent could have afforded a PC with the Internet connection) were making some money by selling some PHP scripts (like the ‘WAP FTP’ I have mentioned). But since most of us were boys in early teenage years, without computers, how did we manage to transfer money? By buying top up vouchers and sending the unique codes. Back then, you could get most of the things for $2-15.</p>
+
+<p>Almost ten years fast forward, I have just finished year 2 at University of Manchester (Computer Science, obviously) and am about to start writing OS in ARM assembler as a final year project. That was quite a trip so far!</p>
+]]></content>
+  </entry>
+  
+</feed>

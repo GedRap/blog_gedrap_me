@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: OS | Ged's Blog]]></title>
+  <link href="http://blog.gedrap.me/blog/categories/os/atom.xml" rel="self"/>
+  <link href="http://blog.gedrap.me/"/>
+  <updated>2014-02-10T17:03:04+00:00</updated>
+  <id>http://blog.gedrap.me/</id>
+  <author>
+    <name><![CDATA[Gediminas Rapolavicius]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[OS in 15 weeks: choosing the platform]]></title>
+    <link href="http://blog.gedrap.me/blog/2013/11/02/os-in-15-weeks-choosing-the-platform/"/>
+    <updated>2013-11-02T15:47:00+00:00</updated>
+    <id>http://blog.gedrap.me/blog/2013/11/02/os-in-15-weeks-choosing-the-platform</id>
+    <content type="html"><![CDATA[<p>My goal: write an (kind of) operating system in 15 weeks.</p>
+
+<p>I&rsquo;ve been dreaming about it for a while. I tried copy&amp;paste various snippets (without having an idea what they do) when I was about 15. Gave up a week later :)</p>
+
+<p>Now, as I am doing my final year at university, and know a tiny little bit more about how computers work, it&rsquo;s time to do it again, this time as a third year project (which counts as 25% of the degree).</p>
+
+<p>The first challenge I encountered was choosing the platform to build it for. PC? Raspberry Pi? Some ARM board? I am going to describe the thought process I went through in this post.</p>
+
+<!-- more -->
+
+
+<h2>PC</h2>
+
+<p>This naturally came as first consideration. While there are <a href="http://www.amazon.co.uk/Modern-Operating-Systems-Andrew-Tanenbaum/dp/1292025778">plenty</a>
+<a href="http://wiki.osdev.org/Main_Page">of</a> information on the Web and examples to look at (whether it&rsquo;s <a href="http://www.menuetos.net/">MenuetOS</a> or early <a href="https://www.kernel.org/pub/linux/kernel/Historic/old-versions/">Linux kernels</a>), I quickly rejected it. First of all, it would require studying x86 architecture in some depth, which would take considerable time. Given the time frame of 15 weeks (300-400 hours), it&rsquo;s not great. Secondly, I was really eager to get more experience with microcontrollers. Writing a simple calculator in ARM assembly half a year ago made me eager to do more of the same. Oh those evening in the lab, stepping instruction by instruction&hellip;</p>
+
+<h2>Raspberry PI</h2>
+
+<p>It&rsquo;s hard to skip that, when it has so much hype around it. A familiar ARM architecture and a large community. But I was warned early by my supervisor, that Raspberry is not totally open (which sucks, if you are hacking) and there were failed attempts in the past because of it. I left it as a &lsquo;Plan B&rsquo;. But didn&rsquo;t come back :)</p>
+
+<h2>ARM board with Xilinx FPGA</h2>
+
+<p>I&rsquo;ve written a before mentioned calculator (after attaching 3*4 keyboard) for <a href="http://brej.org/armboard/">this board</a>. Pros: my supervisor contributed building it (loads of help available!). Cons: dubious suport of GCC toolchain (writing everything in assembly might not be the most productive thing). Is familiar architecture pro or con? That&rsquo;s discussable. ARM is everywhere. But knowing more than architecture is benefitial when it comes to comparing. So what other architectures are available? And here we come to&hellip;</p>
+
+<h2>AVR (Arduino)</h2>
+
+<p>Modified Harvard architecture. Something new to me, but not too complex to understand it quickly. Huge community support, both for AVR itself and Arduino. Why Arduino rather than simple AVR board? First of all, Arduino gives some optional abstraction. It&rsquo;s up to you to use or not. For instance, TFT LCD library with functions such as writing text might save a lot of time. At first, I was afraid that it might be hard to find help when it comes to more advanced topics bot oh I was wrong. Arduino has amazin community. The only con? Default IDE quickly becomes too simple and limiting. Then Atmel Studio comes to help! Therefore, it became my choice!</p>
+
+<h2>Project Aim</h2>
+
+<p>Surprisingly, it took me a while to decide what do I want to build. After some thought I came up with:</p>
+
+<ul>
+<li>Multitasking. Simple context switching.</li>
+<li>I/O events. For instance, call application&rsquo;s callback, when interrupt occurs. But wait, we have to serve interrupts fast! We need a queue! Starts to get interesting :)</li>
+<li>Simple UI manager. Let applications output some text. But it will be a mess if we allow multiple threads to write at once&hellip; We need a resource manager and locks! Now it&rsquo;s getting fun!</li>
+<li>An application (or two!) to demonstrate the features.</li>
+</ul>
+
+
+<p>I am excited!</p>
+]]></content>
+  </entry>
+  
+</feed>

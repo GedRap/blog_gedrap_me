@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Productivity | Ged's Blog]]></title>
+  <link href="http://blog.gedrap.me/blog/categories/productivity/atom.xml" rel="self"/>
+  <link href="http://blog.gedrap.me/"/>
+  <updated>2014-02-10T17:03:04+00:00</updated>
+  <id>http://blog.gedrap.me/</id>
+  <author>
+    <name><![CDATA[Gediminas Rapolavicius]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[It's all about the short breaks]]></title>
+    <link href="http://blog.gedrap.me/blog/2014/02/09/its-all-about-the-short-breaks/"/>
+    <updated>2014-02-09T16:36:00+00:00</updated>
+    <id>http://blog.gedrap.me/blog/2014/02/09/its-all-about-the-short-breaks</id>
+    <content type="html"><![CDATA[<p>I&rsquo;ve recently notice that how productive your day is depends all on how do you spend your short breaks.</p>
+
+<p>There are two kinds of short breaks:</p>
+
+<ul>
+<li>one during which you just actually have a short, relaxing break for a cup of coffee, cigarette, or anything like that,</li>
+<li>one which evolves into a long, focus loosing and feeling guilty for doing nothing break.</li>
+</ul>
+
+
+<p>The hazard with taking a short break is that it can easily escalate into the second type of a break.
+A coffee followed by Hacker News, or a few minutes of watching TV series followed by spending an hour because you just have to know what happens next (I&rsquo;m looking at you, Dexter).</p>
+
+<p>I also found that the key to staying productive is keeping the short breaks useful, meaningful. Do what actually relaxes you and prepares for another focused sprint. Checking Hacker News probably isn&rsquo;t. Going away from the computer to make a cup of tea is. Well, at least for me.
+Because once you take a &lsquo;bad&rsquo; break, it is hard to get the focus back to the initial level. Tasks are pilling up, feeling of guilt strikes sooner or latter, undone tasks are moved for tomorrow. And tomorrow is just worse.</p>
+
+<p>I found that <a href="http://pomodorotechnique.com/">Pomodoro Technique</a> is extremely useful for this, especially for the ugly taks which just have to be done. 5 minutes breaks are long enough to have a quick snack, or a little walk away from the computer. But it is not long enough to lose the focus. And knowing that your next break is soon, keeps you away from distractions.</p>
+
+<p>OK, my short break is over, back to coding!</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Coding | Ged's Blog]]></title>
+  <link href="http://blog.gedrap.me/blog/categories/coding/atom.xml" rel="self"/>
+  <link href="http://blog.gedrap.me/"/>
+  <updated>2014-02-10T17:03:04+00:00</updated>
+  <id>http://blog.gedrap.me/</id>
+  <author>
+    <name><![CDATA[Gediminas Rapolavicius]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Writing Code With a Cellphone Back in 2005]]></title>
+    <link href="http://blog.gedrap.me/blog/2013/07/30/writing-code-with-a-cellphone-back-in-2005/"/>
+    <updated>2013-07-30T10:25:00+01:00</updated>
+    <id>http://blog.gedrap.me/blog/2013/07/30/writing-code-with-a-cellphone-back-in-2005</id>
+    <content type="html"><![CDATA[<p>Year 2005. PCs and Internet are still too expensive for the majority of Lithuanians, entry level cell phones got colorful screens and GPRS became affordable. And a bunch of teenagers itching to create a new WAP (mobile WEB) site.</p>
+
+<p>When I was preparing for my first real job interview, I was trying to remember how I got into programming. It is sentimental, a bit funny now. But that’s how I got hooked on.</p>
+
+<p>By writing PHP using an entry level cell phone.</p>
+
+<p>The browsers were extremely limited (you can’t put much into 96x65 screen, can you?). No bold text. No colorful text. No font-sizes. Just plain text, images, inputs and links. But when people are in need and are highly motivated, they come with creative solutions.</p>
+
+<p>There was a thing called ‘WAP FTP’. A dead simple FTP client for WAP. You type in login credentials, you type in the source code in a number of input fields (since one input field was limited to 180 or 160 characters), you type file path and click ‘Save’. Then, you hold your breath for a second, type in the URL of your masterpiece.</p>
+
+<p>‘File format not supported’. That was a common message by the browser. It meant that there is either PHP error (those browsers couldn’t really deal with malformed XML) or malformed WML (basically HTML for WAP).</p>
+
+<p>What’s next? Typing (yeah, lots of typing, the rubber buttons used to wear out pretty fast) the broken page’s URL in a tool we called ‘source viewer’, which is the same as ‘View source’ in your browser, to find the error because it allowed us to see PHP error messages.</p>
+
+<p>What about debugging? Well, we were too young to produce something that would need debugging actually. Most of us were ~14 years old, couldn’t read English, and were sharing scarce articles we could manage to find in our native language.</p>
+
+<p>The smarter ones (or the ones whose parent could have afforded a PC with the Internet connection) were making some money by selling some PHP scripts (like the ‘WAP FTP’ I have mentioned). But since most of us were boys in early teenage years, without computers, how did we manage to transfer money? By buying top up vouchers and sending the unique codes. Back then, you could get most of the things for $2-15.</p>
+
+<p>Almost ten years fast forward, I have just finished year 2 at University of Manchester (Computer Science, obviously) and am about to start writing OS in ARM assembler as a final year project. That was quite a trip so far!</p>
+]]></content>
+  </entry>
+  
+</feed>
