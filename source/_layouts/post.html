@@ -7,6 +7,9 @@ single: true
 <article class="hentry" role="article">
   {% include article.html %}
   <footer>
+  <p>
+    If you enjoyed reading this post, <a href="http://twitter.com/gedrap" onClick="_gaq.push(['_trackEvent', 'find_out_more', 'twitter']);">follow me on Twitter</a> or <a onClick="_gaq.push(['_trackEvent', 'find_out_more', 'projects']);" href="http://gedrap.me/projects.html">check out my projects</a>
+    </p>
     <p class="meta">
       {% include post/author.html %}
       {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
@@ -15,6 +18,7 @@ single: true
     {% unless page.sharing == false %}
       {% include post/sharing.html %}
     {% endunless %}
+
     <p class="meta">
       {% if page.previous.url %}
         <a class="basic-alignment left" href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&laquo; {{page.previous.title}}</a>
