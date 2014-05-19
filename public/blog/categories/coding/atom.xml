@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Coding | Ged's Blog]]></title>
   <link href="http://blog.gedrap.me/blog/categories/coding/atom.xml" rel="self"/>
   <link href="http://blog.gedrap.me/"/>
-  <updated>2014-02-10T17:03:04+00:00</updated>
+  <updated>2014-05-19T15:57:20+01:00</updated>
   <id>http://blog.gedrap.me/</id>
   <author>
     <name><![CDATA[Gediminas Rapolavicius]]></name>
@@ -12,6 +12,29 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Poor User Experience Is A Bug]]></title>
+    <link href="http://blog.gedrap.me/blog/2014/02/24/poor-ux-is-a-bug/"/>
+    <updated>2014-02-24T17:08:00+00:00</updated>
+    <id>http://blog.gedrap.me/blog/2014/02/24/poor-ux-is-a-bug</id>
+    <content type="html"><![CDATA[<p>When I switched to being a full stack developer after working on the backend exclusively for a while, I sucked at UX.
+While the applications did what they were meant to do, it was not enjoyable using them.</p>
+
+<p>And I didn&rsquo;t pay too much attention to that. Because hey it works! Moving the elements around, improving the layout was
+just &ldquo;a minor tweak&rdquo;. What&rsquo;s the big deal about that?</p>
+
+<p>Suddenly (well after I got snowballed with loads of requests from the users), I realised that for the end user, it doesn&rsquo;t matter whether it&rsquo;s just a minor tweak, or there are loads of bugs.
+For the end user, the result is the same: it doesn&rsquo;t really work. It <strong>is</strong> a bug, not a minor tweak
+because it prevents from completing the user&rsquo;s tasks.</p>
+
+<p>That was my moment of epiphany. It&rsquo;s easy to forget that not all users are living in front of the computer, for some of them, the computer is just a tool, an obstacle.</p>
+
+<p>Since then, my software got much better. The users are happier. And I became happier when working because I see that my software makes their lives easier.</p>
+
+<p><em>(if you are considering hiring me, yes, I have improved. By the way, I am looking for a graduate job. Checkout my projects or email me at gediminas.rap at google&rsquo;s mail service)</em></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Writing Code With a Cellphone Back in 2005]]></title>
